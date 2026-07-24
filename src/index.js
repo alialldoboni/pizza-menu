@@ -46,22 +46,43 @@ const pizzaData = [
   },
 ];
 
-function header() {}
+function Header() {
+  return <h1>fastly pizza</h1>;
+}
 
-function Menu() {}
-
-function Footer() {}
-
-function App() {
+function Menu() {
   return (
     <div>
-      <h1>Hello, World!</h1>
-      <PizzaProsciutto />
+      <h2>Our Menu</h2>
+      <Pizza />
+      <Pizza />
+      <Pizza />
+      <Pizza />
+      <Pizza />
     </div>
   );
 }
 
-function PizzaProsciutto() {
+function Footer() {
+  return (
+    <footer>{new Date().toLocaleTimeString()} we are currently open!</footer>
+  );
+}
+
+function App() {
+  return (
+    <div>
+      <h1>
+        <Header />
+      </h1>
+
+      <Menu />
+      <Footer />
+    </div>
+  );
+}
+
+function Pizza() {
   return (
     <div>
       <img src="pizzas/prosciutto.jpg" alt="Pizza Prosciutto" />
