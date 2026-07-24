@@ -64,6 +64,15 @@ function Menu() {
 }
 
 function Footer() {
+  const Hour = new Date().getHours();
+  const openHour = 12;
+  const closeHour = 22;
+  const isOpen = Hour >= openHour && Hour <= closeHour;
+  console.log(isOpen);
+
+  //if (Hour >= openHour && Hour <= closeHour) alert("We are Currently Open!");
+  //else alert("Sorry, We Are Currently Closed!");
+
   return (
     <footer>{new Date().toLocaleTimeString()} we are currently open!</footer>
   );
